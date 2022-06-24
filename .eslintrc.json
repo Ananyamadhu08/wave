@@ -1,12 +1,52 @@
 {
   "env": {
-    "es2021": true
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
   },
   "extends": ["airbnb-base", "prettier", "plugin:node/recommended"],
-  "plugins": ["prettier"],
+  "plugins": ["react", "prettier"],
   "rules": {
     "prettier/prettier": "error",
     "no-unused-vars": "error",
-    "no-console": "off"
+    "no-console": "off",
+    "consistent-return": [
+      "off",
+      {
+        "treatUndefinedAsUnspecified": false
+      }
+    ],
+    "camelcase": [
+      "off",
+      {
+        "ignoreDestructuring": false,
+        "ignoreImports": false,
+        "ignoreGlobals": false,
+        "properties": "never",
+        "allow": null
+      }
+    ],
+    "no-underscore-dangle": [
+      "off",
+      {
+        "allow": [],
+        "allowAfterThis": false,
+        "allowAfterSuper": false,
+        "allowAfterThisConstructor": false,
+        "enforceInMethodNames": true,
+        "allowFunctionParams": true
+      }
+    ],
+    "node/no-unsupported-features/es-syntax": [
+      "off",
+      {
+        "version": null,
+        "ignores": []
+      }
+    ]
   }
 }

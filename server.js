@@ -23,6 +23,9 @@ mongoose.connect(URI, (err) => {
   console.log('connected to mongoDB');
 });
 
+// routes
+app.use('/api', require('./routes/authRouter'));
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
