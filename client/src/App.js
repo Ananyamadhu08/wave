@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { PageRenderer } from "./customRouter";
+import { Home, Register } from "./pages";
 
 const App = () => {
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { NotFound } from "../components";
 
 const pageGenerator = (pageName) => {
   const component = () => require(`../pages/${pageName}`).default;
