@@ -1,18 +1,44 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import { PageRenderer } from "./customRouter";
-import { Home, Register } from "./pages";
+import { refreshToken } from "./features";
+import { Home, Login, Register } from "./pages";
 
 const App = () => {
+  const { auth } = useSelector((state) => state);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(refreshToken());
+  }, [dispatch]);
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
+    <div className="h-full min-h-screen bg-white">
+      <ToastContainer
+        theme={"light"}
+        position="bottom-left"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        draggable
+        pauseOnHover
+      />
 
-      <Route path="/register" element={<Register />} />
+      <Routes>
+        <Route path="/" element={auth.token ? <Home /> : <Login />} />
 
-      <Route path="/:page" element={<PageRenderer />} />
+        <Route path="/register" element={<Register />} />
 
-      <Route path="/:page/:id" element={<PageRenderer />} />
-    </Routes>
+        <Route path="/:page" element={<PageRenderer />} />
+
+        <Route path="/:page/:id" element={<PageRenderer />} />
+      </Routes>
+    </div>
   );
 };
 
