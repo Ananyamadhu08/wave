@@ -6,9 +6,12 @@ import { Header } from "./components";
 import { PageRenderer } from "./customRouter";
 import { refreshToken } from "./features";
 import { Home, Login, Register } from "./pages";
+import { useTheme } from "./context";
 
 const App = () => {
   const { auth } = useSelector((state) => state);
+
+  const { theme } = useTheme();
 
   const dispatch = useDispatch();
 
@@ -17,9 +20,9 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <div className="h-full min-h-screen bg-white">
+    <div className="h-full min-h-screen bg-white dark:bg-slate-900">
       <ToastContainer
-        theme={"light"}
+        theme={theme === "light" ? "light" : "dark"}
         position="bottom-left"
         autoClose={2000}
         hideProgressBar={false}
