@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import { Header } from "./components";
 import { PageRenderer } from "./customRouter";
 import { refreshToken } from "./features";
 import { Home, Login, Register } from "./pages";
@@ -28,6 +29,8 @@ const App = () => {
         draggable
         pauseOnHover
       />
+
+      {auth.token && <Header />}
 
       <Routes>
         <Route path="/" element={auth.token ? <Home /> : <Login />} />
