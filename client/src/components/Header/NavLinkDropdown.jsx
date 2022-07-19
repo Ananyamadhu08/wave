@@ -34,7 +34,7 @@ const NavLinkDropdown = () => {
 
   return (
     <div>
-      <Menu as="div" className="relative inline-block text-left">
+      <Menu as="div" className="relative inline-block text-left z-50">
         <div>
           <Menu.Button className="inline-flex w-full justify-center items-center rounded-md px-4 py-2  text-sm font-medium text-black">
             <img
