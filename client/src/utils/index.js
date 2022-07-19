@@ -6,4 +6,18 @@ import {
   deleteDataAPI,
 } from "./fetchData";
 
-export { getDataAPI, postDataAPI, putDataAPI, patchDataAPI, deleteDataAPI };
+import { EditData, DeleteData } from "./editData";
+
+import { checkImage, uploadImage } from "./imageUpload";
+
+export {
+  getDataAPI,
+  postDataAPI,
+  putDataAPI,
+  patchDataAPI,
+  deleteDataAPI,
+  EditData,
+  DeleteData,
+  checkImage,
+  uploadImage,
+};
