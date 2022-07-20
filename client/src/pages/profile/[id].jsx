@@ -24,7 +24,7 @@ const Profile = () => {
 
   return (
     <div
-      className="w-full bg-white dark:bg-slate-900"
+      className="w-full bg-white dark:bg-slate-900 min-h-screen"
       style={{ position: "relative", top: "5rem" }}
     >
       <UserInfo id={id} auth={auth} profile={profile} />
@@ -65,7 +65,7 @@ const Profile = () => {
       {profile.loading ? (
         <span className="loader block mx-auto"></span>
       ) : (
-        <>
+        <div className="m-8">
           {tab === "Saved" && <Saved auth={auth} dispatch={dispatch} />}
           {tab === "Posts" && (
             <UserPosts
@@ -75,7 +75,7 @@ const Profile = () => {
               id={id}
             />
           )}
-        </>
+        </div>
       )}
     </div>
   );
