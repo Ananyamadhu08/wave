@@ -12,9 +12,9 @@ app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
 
-// app.get('/', (req, res) => {
-//   res.json({ msg: 'hello world' });
-// });
+app.get('/', (req, res) => {
+  res.json({ msg: 'hello world' });
+});
 
 const URI = process.env.MONGODB_URL;
 
