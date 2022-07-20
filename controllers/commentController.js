@@ -1,7 +1,6 @@
 const Posts = require('../models/postModel');
 const Comments = require('../models/commentModel');
 
-// commentController
 const commentController = {
   createComment: async (req, res) => {
     try {
