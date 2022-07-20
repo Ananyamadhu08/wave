@@ -22,6 +22,7 @@ const RightSideBar = () => {
 
   useEffect(() => {
     dispatch(getSuggestions({ token: auth.token, showToast }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

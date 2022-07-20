@@ -106,6 +106,7 @@ const CreatePostModal = () => {
       setContent(postModal.editPost.content);
       setImages(postModal.editPost.images);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [postModal.isModalOpen]);
 
   return (

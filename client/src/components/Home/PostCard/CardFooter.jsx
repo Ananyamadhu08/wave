@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { likePost, savePost, unlikePost, unSavePost } from "../../../features";
 import { useToast } from "../../../hooks";
-import { useTheme } from "../../../context/ThemeProvider";
 import LikeButton from "../../LikeButton";
 
 const CardFooter = ({ post }) => {
@@ -17,8 +16,6 @@ const CardFooter = ({ post }) => {
   const [saveLoad, setSaveLoad] = useState(false);
 
   const { showToast } = useToast();
-
-  //   const { theme } = useTheme();
 
   // Likes
   useEffect(() => {

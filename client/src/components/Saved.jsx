@@ -26,6 +26,7 @@ const Saved = ({ auth, dispatch }) => {
       });
 
     return () => setSavePosts([]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [auth.token, dispatch]);
 
   const handleLoadMore = async () => {
