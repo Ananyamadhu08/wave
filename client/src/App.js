@@ -2,14 +2,14 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { Header } from "./components";
+import { CreatePostModal, Header } from "./components";
 import { PageRenderer } from "./customRouter";
 import { refreshToken } from "./features";
 import { Home, Login, Register } from "./pages";
 import { useTheme } from "./context";
 
 const App = () => {
-  const { auth } = useSelector((state) => state);
+  const { auth, postModal } = useSelector((state) => state);
 
   const { theme } = useTheme();
 
@@ -20,7 +20,7 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <div className="h-full min-h-screen bg-white dark:bg-slate-900">
+    <div className="bg-white dark:bg-slate-900">
       <ToastContainer
         theme={theme === "light" ? "light" : "dark"}
         position="bottom-left"
@@ -34,6 +34,8 @@ const App = () => {
       />
 
       {auth.token && <Header />}
+
+      {postModal?.isModalOpen && <CreatePostModal />}
 
       <Routes>
         <Route path="/" element={auth.token ? <Home /> : <Login />} />
