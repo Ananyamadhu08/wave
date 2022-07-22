@@ -23,9 +23,9 @@ mongoose.connect(URI, (err) => {
   console.log('connected to mongoDB');
 });
 
-app.get('/', (req, res) => {
-  res.send('Backend');
-});
+// app.get('/', (req, res) => {
+//   res.send('Backend');
+// });
 
 // routes
 app.use('/api', require('./routes/authRouter'));
@@ -33,12 +33,12 @@ app.use('/api', require('./routes/userRouter'));
 app.use('/api', require('./routes/postRouter'));
 app.use('/api', require('./routes/commentRouter'));
 
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static('client/build'));
-//   app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-//   });
-// }
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+  });
+}
 
 const port = process.env.PORT || 5000;
 
