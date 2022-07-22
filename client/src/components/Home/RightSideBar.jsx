@@ -3,14 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { getSuggestions } from "../../features";
 import { useToast } from "../../hooks";
 
-import lottie from "lottie-web";
-import { defineLordIconElement } from "lord-icon-element";
-
 import FollowButton from "../FollowButton";
 import { useTheme } from "../../context";
 import UserCard from "../UserCard";
-
-defineLordIconElement(lottie.loadAnimation);
 
 const RightSideBar = () => {
   const { auth, profile } = useSelector((state) => state);
@@ -32,27 +27,23 @@ const RightSideBar = () => {
         <h5 className="dark:text-white">Suggestions for you</h5>
         {!profile.suggestionLoading &&
           (theme === "light" ? (
-            <lord-icon
-              src="https://cdn.lordicon.com/sihdhmit.json"
-              trigger="morph"
-              stroke="70"
-              colors={"primary:#06b6d4"}
-              style={{ width: "1.5rem", height: "1.5rem", cursor: "pointer" }}
+            <div
+              className="text-xl text-cyan-500"
               onClick={() =>
                 dispatch(getSuggestions({ token: auth.token, showToast }))
               }
-            ></lord-icon>
+            >
+              <i className="fa-solid fa-arrows-rotate"></i>
+            </div>
           ) : (
-            <lord-icon
-              src="https://cdn.lordicon.com/sihdhmit.json"
-              trigger="morph"
-              stroke="70"
-              colors={"primary:#06b6d4 "}
-              style={{ width: "1.5rem", height: "1.5rem", cursor: "pointer" }}
+            <div
+              className="text-xl text-cyan-500"
               onClick={() =>
                 dispatch(getSuggestions({ token: auth.token, showToast }))
               }
-            ></lord-icon>
+            >
+              <i className="fa-solid fa-arrows-rotate"></i>
+            </div>
           ))}
       </div>
 

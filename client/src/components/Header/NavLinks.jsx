@@ -1,9 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../../context";
-import lottie from "lottie-web";
-import { defineLordIconElement } from "lord-icon-element";
-defineLordIconElement(lottie.loadAnimation);
 
 const NavLinks = () => {
   const { theme } = useTheme();
@@ -13,21 +10,13 @@ const NavLinks = () => {
         {
           <NavLink to="/">
             {theme === "light" ? (
-              <lord-icon
-                src="https://cdn.lordicon.com/igpbsrza.json"
-                trigger="hover"
-                stroke="70"
-                colors={"primary:#06b6d4 ,secondary:#f0fdfa"}
-                style={{ width: "2.5rem", height: "2.5rem" }}
-              ></lord-icon>
+              <div className="text-3xl text-cyan-50">
+                <i className="fa-solid fa-house"></i>
+              </div>
             ) : (
-              <lord-icon
-                src="https://cdn.lordicon.com/igpbsrza.json"
-                trigger="hover"
-                stroke="70"
-                colors={"primary:#ecfeff ,secondary:#67e8f9"}
-                style={{ width: "2.5rem", height: "2.5rem" }}
-              ></lord-icon>
+              <div className="text-3xl text-cyan-50">
+                <i className="fa-solid fa-house"></i>
+              </div>
             )}
           </NavLink>
         }
@@ -35,42 +24,26 @@ const NavLinks = () => {
       <li>
         <NavLink to="/chat">
           {theme === "light" ? (
-            <lord-icon
-              src="https://cdn.lordicon.com/uvextprq.json"
-              trigger="hover"
-              stroke="70"
-              colors={"primary:#06b6d4 ,secondary:#f0fdfa"}
-              style={{ width: "2.5rem", height: "2.5rem" }}
-            ></lord-icon>
+            <div className="text-3xl text-cyan-50">
+              <i className="fa-solid fa-comment"></i>
+            </div>
           ) : (
-            <lord-icon
-              src="https://cdn.lordicon.com/uvextprq.json"
-              trigger="hover"
-              stroke="70"
-              colors={"primary:#ecfeff ,secondary:#67e8f9"}
-              style={{ width: "2.5rem", height: "2.5rem" }}
-            ></lord-icon>
+            <div className="text-3xl text-cyan-50">
+              <i className="fa-solid fa-comment"></i>
+            </div>
           )}
         </NavLink>
       </li>
       <li>
         <NavLink to="/chat">
           {theme === "light" ? (
-            <lord-icon
-              src="https://cdn.lordicon.com/ndydpcaq.json"
-              trigger="hover"
-              stroke="70"
-              colors={"primary:#06b6d4 ,secondary:#f0fdfa"}
-              style={{ width: "2.5rem", height: "2.5rem" }}
-            ></lord-icon>
+            <div className="text-3xl text-cyan-50">
+              <i className="fa-solid fa-bell"></i>
+            </div>
           ) : (
-            <lord-icon
-              src="https://cdn.lordicon.com/ndydpcaq.json"
-              trigger="hover"
-              stroke="70"
-              colors={"primary:#ecfeff ,secondary:#67e8f9"}
-              style={{ width: "2.5rem", height: "2.5rem" }}
-            ></lord-icon>
+            <div className="text-3xl text-cyan-50">
+              <i className="fa-solid fa-bell"></i>
+            </div>
           )}
         </NavLink>
       </li>
