@@ -14,7 +14,9 @@ const Home = () => {
         {posts?.loading ? (
           <span className="loader block mx-auto"></span>
         ) : posts?.postsLength === 0 && posts.posts.length === 0 ? (
-          <h2 className="text-center text-white">No Posts</h2>
+          <h2 className="text-center text-slate-900 dark:text-cyan-100">
+            No Posts
+          </h2>
         ) : (
           <HomePosts />
         )}

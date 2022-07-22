@@ -236,24 +236,20 @@ const CreatePostModal = () => {
 
                     <div className="flex justify-center items-center my-4 mx-0">
                       {stream ? (
-                        <lord-icon
-                          src="https://cdn.lordicon.com/vixtkkbk.json"
-                          trigger="click"
-                          stroke="90"
-                          colors="primary:#121331,secondary:#06b6d4"
+                        <div
+                          className="text-3xl text-cyan-500"
                           onClick={handleCapture}
-                          style={{ width: "3.5rem", height: "3.5rem" }}
-                        ></lord-icon>
+                        >
+                          <i class="fa-solid fa-camera"></i>
+                        </div>
                       ) : (
                         <>
-                          <lord-icon
-                            src="https://cdn.lordicon.com/vixtkkbk.json"
-                            trigger="click"
-                            stroke="90"
-                            colors="primary:#121331,secondary:#06b6d4"
+                          <div
+                            className="text-3xl text-cyan-500"
                             onClick={handleStream}
-                            style={{ width: "3.5rem", height: "3.5rem" }}
-                          ></lord-icon>
+                          >
+                            <i class="fa-solid fa-camera"></i>
+                          </div>
 
                           <div className="overflow-hidden my-0 mx-4 relative text-cyan-500">
                             <BsImages

@@ -74,7 +74,7 @@ const CardFooter = ({ post }) => {
 
   return (
     <div className="mt-4">
-      <div className="flex items-center cursor-pointer py-0 px-6">
+      <div className="flex gap-3 items-center cursor-pointer py-0 px-6">
         <LikeButton
           isLike={isLike}
           handleLike={handleLike}
@@ -82,23 +82,13 @@ const CardFooter = ({ post }) => {
         />
 
         {saved ? (
-          <lord-icon
-            src="https://cdn.lordicon.com/wurbjznp.json"
-            trigger="click"
-            stroke="90"
-            colors="primary:#06b6d4"
-            onClick={handleUnSavePost}
-            style={{ width: "2rem", height: "2rem" }}
-          ></lord-icon>
+          <div className="text-3xl text-cyan-500" onClick={handleUnSavePost}>
+            <i className="fa-solid fa-bookmark"></i>
+          </div>
         ) : (
-          <lord-icon
-            src="https://cdn.lordicon.com/wurbjznp.json"
-            trigger="hover"
-            stroke="90"
-            colors="primary:#06b6d4"
-            onClick={handleSavePost}
-            style={{ width: "2rem", height: "2rem" }}
-          ></lord-icon>
+          <div className="text-3xl text-cyan-500" onClick={handleSavePost}>
+            <i className="fa-solid fa-bookmark"></i>
+          </div>
         )}
       </div>
 

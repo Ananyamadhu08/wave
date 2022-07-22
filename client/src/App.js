@@ -4,20 +4,30 @@ import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { CreatePostModal, Header } from "./components";
 import { PageRenderer } from "./customRouter";
-import { refreshToken } from "./features";
+import { getPosts, refreshToken } from "./features";
 import { Home, Login, Register } from "./pages";
 import { useTheme } from "./context";
+import { useToast } from "./hooks";
 
 const App = () => {
   const { auth, postModal } = useSelector((state) => state);
 
   const { theme } = useTheme();
 
+  const { showToast } = useToast();
+
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(refreshToken());
   }, [dispatch]);
+
+  useEffect(() => {
+    if (auth.token) {
+      dispatch(getPosts({ token: auth.token, showToast }));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch, auth.token]);
 
   return (
     <div className="bg-white dark:bg-slate-900">

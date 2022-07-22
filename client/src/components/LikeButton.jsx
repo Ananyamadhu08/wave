@@ -4,23 +4,13 @@ const LikeButton = ({ isLike, handleLike, handleUnLike }) => {
   return (
     <>
       {isLike ? (
-        <lord-icon
-          src="https://cdn.lordicon.com/rjzlnunf.json"
-          trigger="click"
-          stroke="90"
-          colors="primary:#06b6d4,secondary:#06b6d4"
-          style={{ width: "2.5rem", height: "2.5rem" }}
-          onClick={handleUnLike}
-        ></lord-icon>
+        <div className="text-3xl text-cyan-500" onClick={handleUnLike}>
+          <i className="fa-solid fa-heart"></i>
+        </div>
       ) : (
-        <lord-icon
-          src="https://cdn.lordicon.com/rjzlnunf.json"
-          trigger="click"
-          stroke="90"
-          colors="primary:#06b6d4,secondary:#06b6d4"
-          style={{ width: "2.5rem", height: "2.5rem" }}
-          onClick={handleLike}
-        ></lord-icon>
+        <div className="text-3xl text-cyan-500" onClick={handleLike}>
+          <i className="fa-solid fa-heart"></i>
+        </div>
       )}
     </>
   );
