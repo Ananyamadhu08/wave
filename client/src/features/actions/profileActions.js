@@ -198,7 +198,7 @@ export const getSuggestions = createAsyncThunk(
   async ({ token, showToast }, thunkAPI) => {
     thunkAPI.dispatch(setSuggestionLoading(true));
     try {
-      const res = await getDataAPI("suggestionsUser", token);
+      const res = await getDataAPI("userSuggestions", token);
 
       thunkAPI.dispatch(setSuggestionLoading(false));
       return res.data;
