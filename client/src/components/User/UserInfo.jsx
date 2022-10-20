@@ -16,11 +16,14 @@ const UserInfo = ({ id, auth, profile }) => {
   useEffect(() => {
     if (id === auth.user?._id) {
       setUserData([auth.user]);
+    } else {
+      const newData = profile.users.filter((user) => user._id === id);
+      setUserData(newData);
     }
-  }, [id, auth, auth.user]);
+  }, [id, auth, auth.user, profile.users]);
 
   return (
-    <div className="w-full max-w-4xl px-5 py-3 mx-auto pt-8">
+    <div className="w-full max-w-4xl px-5 mx-auto">
       {userData.map((user) => (
         <div className="flex justify-around flex-wrap" key={user._id}>
           <Avatar

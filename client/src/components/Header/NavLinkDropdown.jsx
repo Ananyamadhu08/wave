@@ -62,7 +62,7 @@ const NavLinkDropdown = () => {
               <Menu.Item>
                 {({ active }) => (
                   <Link
-                    to={`/profile/${auth.user._id}`}
+                    to={`/user/${auth.user._id}`}
                     className={`${
                       active
                         ? "bg-cyan-500 text-white"

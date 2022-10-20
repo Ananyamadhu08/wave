@@ -2,7 +2,6 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import { BsImages } from "react-icons/bs";
 import Avatar from "./Avatar";
 
 const UserCard = ({
@@ -19,31 +18,6 @@ const UserCard = ({
     if (handleClose) handleClose();
     if (setShowFollowers) setShowFollowers(false);
     if (setShowFollowing) setShowFollowing(false);
-  };
-
-  const showMsg = (user) => {
-    return (
-      <>
-        <div>{user.text}</div>
-        {user.media.length > 0 && (
-          <div>
-            {user.media.length} <BsImages />
-          </div>
-        )}
-
-        {user.call && (
-          <span className="material-icons">
-            {user.call.times === 0
-              ? user.call.video
-                ? "videocam_off"
-                : "phone_disabled"
-              : user.call.video
-              ? "video_camera_front"
-              : "call"}
-          </span>
-        )}
-      </>
-    );
   };
 
   return (
@@ -63,7 +37,7 @@ const UserCard = ({
           </span>
 
           <small className="dark:text-white" style={{ opacity: 0.7 }}>
-            {msg ? showMsg(user) : user.fullName}
+            {user.fullName}
           </small>
         </div>
       </Link>
