@@ -51,7 +51,7 @@ const UserCard = ({
       className={`flex p-2 items-center justify-between dark:text-white w-full ${border}`}
     >
       <Link
-        to={to ? `/user/${user._id}` : `/chat/${user._id}`}
+        to={`/user/${user._id}`}
         onClick={handleCloseAll}
         className="flex items-center w-full"
       >
