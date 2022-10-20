@@ -15,7 +15,7 @@ const CreatePost = () => {
         className="w-14 h-12 rounded-full"
       />
       <button
-        className="bg-cyan-100 dark:bg-slate-900 dark:text-cyan-50 text-slate-900 border-none outline-none rounded-[30px] w-full text-2xl py-0 px-3 text-left my-0 ml-3 hover:bg-slate-400 dark:hover:bg-slate-900"
+        className="bg-cyan-100 dark:bg-slate-900 dark:text-cyan-50 text-slate-900 border-none outline-none rounded-[30px] w-full text-2xl py-0 px-6 text-left my-0 ml-4 hover:bg-cyan-200 dark:hover:bg-slate-800"
         onClick={() => dispatch(setPostModal({ isModalOpen: true }))}
       >
         {auth.user.userName}, what are you thinking?

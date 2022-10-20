@@ -38,7 +38,7 @@ const NavLinkDropdown = () => {
             <img
               src={auth.user.avatar}
               alt={auth.user.userName}
-              className="h-8 w-8 rounded-full"
+              className="h-9 w-9 rounded-full"
             />
             <HiChevronDown
               className="ml-2 -mr-1 h-6 w-6 text-cyan-100 hover:text-cyan-500"
