@@ -147,7 +147,7 @@ const Register = () => {
             </button>
           </div>
           <div className="mt-6 text-center">
-            <Link to="#" className="underline">
+            <Link to="/login" className="underline">
               Login with existing account
             </Link>
           </div>
