@@ -13,8 +13,6 @@ import { useTheme } from "../../context";
 const NavLinkDropdown = () => {
   const { auth } = useSelector((state) => state);
 
-  const { theme, setTheme } = useTheme();
-
   const { showToast } = useToast();
 
   const dispatch = useDispatch();
@@ -76,25 +74,6 @@ const NavLinkDropdown = () => {
                     />
                     Profile
                   </Link>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active
-                        ? "bg-cyan-500 text-white"
-                        : "text-gray-900 dark:text-gray-100"
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                    onClick={() => {
-                      setTheme((currentTheme) =>
-                        currentTheme === "light" ? "dark" : "light"
-                      );
-                    }}
-                  >
-                    <BsFillMoonStarsFill className="h-4 w-4 rounded-full mr-3" />
-                    {theme === "light" ? "Dark Mode" : "Light Mode"}
-                  </button>
                 )}
               </Menu.Item>
             </div>

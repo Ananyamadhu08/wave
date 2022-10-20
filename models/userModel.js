@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema(
     },
     avatar: {
       type: String,
-      default: `https://res.cloudinary.com/dgl5z5ozi/image/upload/v1653989370/wave%20-%20a%20social%20media%20app/default-user-image_dvyef5.png`,
+      default: `https://res.cloudinary.com/dgl5z5ozi/image/upload/v1666294452/wave/avatar-wave_pavsrz.png`,
     },
     role: { type: String, default: 'user' },
     gender: { type: String, default: 'female' },

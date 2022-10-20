@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 import { useTheme } from "../../context";
 
 const NavLinks = () => {
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
   return (
-    <ul className="flex items-center gap-4 pr-2">
+    <ul className="flex items-center gap-7 pr-2">
       <li>
         {
           <NavLink to="/">
@@ -22,6 +22,27 @@ const NavLinks = () => {
         }
       </li>
       <li>
+        {
+          <button
+            onClick={() => {
+              setTheme((currentTheme) =>
+                currentTheme === "light" ? "dark" : "light"
+              );
+            }}
+          >
+            {theme === "light" ? (
+              <div className="text-3xl text-cyan-50">
+                <i className="fa-solid fa-moon"></i>
+              </div>
+            ) : (
+              <div className="text-3xl text-cyan-50">
+                <i className="fa-solid fa-sun"></i>
+              </div>
+            )}
+          </button>
+        }
+      </li>
+      {/* <li>
         <NavLink to="/chat">
           {theme === "light" ? (
             <div className="text-3xl text-cyan-50">
@@ -33,8 +54,8 @@ const NavLinks = () => {
             </div>
           )}
         </NavLink>
-      </li>
-      <li>
+      </li> */}
+      {/* <li>
         <NavLink to="/chat">
           {theme === "light" ? (
             <div className="text-3xl text-cyan-50">
@@ -46,7 +67,7 @@ const NavLinks = () => {
             </div>
           )}
         </NavLink>
-      </li>
+      </li> */}
     </ul>
   );
 };
