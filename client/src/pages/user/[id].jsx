@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { UserInfo, UserPosts, Saved } from "../../components";
 import { getUser } from "../../features";
-
 import { useToast } from "../../hooks";
 
 const Profile = () => {
@@ -12,15 +11,18 @@ const Profile = () => {
   const [tab, setTab] = useState("Posts");
 
   const dispatch = useDispatch();
+
   const { showToast } = useToast();
+
   const { id } = useParams();
 
   useEffect(() => {
     if (profile.ids.every((item) => item !== id)) {
       dispatch(getUser({ id, auth, showToast }));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id, auth, dispatch, profile.ids]);
+  }, [profile.ids, auth, id, dispatch, showToast]);
+
+  console.log("profile", profile);
 
   return (
     <div
