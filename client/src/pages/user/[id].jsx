@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -17,12 +18,10 @@ const Profile = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    if (profile.ids.every((item) => item !== id)) {
+    if (!profile.ids.find((item) => item === id)) {
       dispatch(getUser({ id, auth, showToast }));
     }
-  }, [profile.ids, auth, id, dispatch, showToast]);
-
-  console.log("profile", profile);
+  }, []);
 
   return (
     <div

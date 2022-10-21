@@ -24,7 +24,7 @@ const profileSlice = createSlice({
       state.loading = payload.loading;
     },
     setId: (state, { payload }) => {
-      state.ids.push(payload.id);
+      if (!state.ids.includes(payload.id)) state.ids.push(payload.id);
     },
     setFollowUser: (state, { payload }) => {
       const index = state.users.findIndex((item) => item._id === payload._id);

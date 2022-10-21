@@ -16,11 +16,11 @@ const FollowButton = ({ user }) => {
 
   useEffect(() => {
     //check if we are already following the user
-    if (auth.user.following.find((item) => item._id === user._id)) {
+    if (auth.user.following.find((item) => item._id === user?._id)) {
       setFollowed(true);
     }
     return () => setFollowed(false);
-  }, [auth.user.following, user._id]);
+  }, [auth.user.following, user?._id]);
 
   const handleFollow = async () => {
     if (load) return;
