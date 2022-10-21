@@ -5,7 +5,7 @@ import { FaRegComments } from "react-icons/fa";
 
 const PostThumb = ({ posts, result }) => {
   if (result === 0)
-    return <h2 className="text-center text-red-500">No Posts</h2>;
+    return <h2 className="text-center text-red-500 mt-5">No Posts</h2>;
 
   return (
     <div

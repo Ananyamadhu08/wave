@@ -1,14 +1,11 @@
 import React, { Fragment } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HiChevronDown } from "react-icons/hi";
-import { BsFillMoonStarsFill } from "react-icons/bs";
 import { BiLogOutCircle } from "react-icons/bi";
-
 import { Menu, Transition } from "@headlessui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { useToast } from "../../hooks";
 import { logoutUser } from "../../features";
-import { useTheme } from "../../context";
 
 const NavLinkDropdown = () => {
   const { auth } = useSelector((state) => state);
