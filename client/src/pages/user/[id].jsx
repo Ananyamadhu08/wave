@@ -26,7 +26,7 @@ const Profile = () => {
   return (
     <div
       className="w-full bg-white dark:bg-slate-900 min-h-screen"
-      style={{ position: "relative", top: "5rem" }}
+      style={{ position: "relative", top: "3rem" }}
     >
       <UserInfo id={id} auth={auth} profile={profile} />
 

@@ -8,7 +8,7 @@ const LikeButton = ({ isLike, handleLike, handleUnLike }) => {
           <i className="fa-solid fa-heart"></i>
         </div>
       ) : (
-        <div className="text-3xl text-cyan-50" onClick={handleLike}>
+        <div className="text-3xl text-slate-400" onClick={handleLike}>
           <i className="fa-solid fa-heart"></i>
         </div>
       )}
