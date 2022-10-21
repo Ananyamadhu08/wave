@@ -11,8 +11,6 @@ const UserCard = ({
   handleClose,
   setShowFollowers,
   setShowFollowing,
-  msg,
-  to,
 }) => {
   const handleCloseAll = () => {
     if (handleClose) handleClose();
