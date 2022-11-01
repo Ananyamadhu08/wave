@@ -7,7 +7,7 @@ import CardHeader from "./Home/PostCard/CardHeader";
 
 const PostCard = ({ post }) => {
   return (
-    <div className="shadow-lg my-6 border border-gray-200 dark:border-gray-700 ">
+    <div className="shadow-lg my-6 border border-gray-200 dark:border-gray-700 rounded">
       <CardHeader post={post} />
       <CardBody post={post} />
       <CardFooter post={post} />

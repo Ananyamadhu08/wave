@@ -4,12 +4,12 @@ const LikeButton = ({ isLike, handleLike, handleUnLike }) => {
   return (
     <>
       {isLike ? (
-        <div className="text-3xl text-cyan-500" onClick={handleUnLike}>
+        <div className="text-[2rem] text-red-600" onClick={handleUnLike}>
           <i className="fa-solid fa-heart"></i>
         </div>
       ) : (
-        <div className="text-3xl text-cyan-500" onClick={handleLike}>
-          <i className="fa-solid fa-heart"></i>
+        <div className="text-[2rem] text-cyan-500" onClick={handleLike}>
+          <i class="fa-regular fa-heart"></i>
         </div>
       )}
     </>

@@ -30,7 +30,7 @@ const HomePosts = () => {
 
       {load && <span className="loader block mx-auto my-4"></span>}
 
-      <div className="flex justify-center mb-10">
+      <div className="flex justify-center mb-24">
         <div className="w-32">
           <LoadMoreButton
             postsLength={posts?.postsLength}

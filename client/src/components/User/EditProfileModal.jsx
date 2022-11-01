@@ -197,7 +197,7 @@ const EditProfileModal = ({ onEdit, setOnEdit }) => {
                         value={gender}
                         onChange={handleInput}
                         id="gender"
-                        className="bg-gray-50 dark:bg-gray-500 dark:text-gray-50 border border-gray-300 text-gray-900 focus:outline-purple-400 focus:outline focus:outline-offset-2 text-sm rounded-lg block w-full p-2.5"
+                        className="bg-gray-50 dark:bg-gray-500 dark:text-gray-50 border border-gray-300 text-gray-900 focus:outline-cyan-400 focus:outline focus:outline-offset-2 text-sm rounded-lg block w-full p-2.5"
                       >
                         <option value="male">Male</option>
                         <option value="female">Female</option>

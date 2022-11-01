@@ -1,19 +1,14 @@
 import React, { Fragment } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HiChevronDown } from "react-icons/hi";
-import { BsFillMoonStarsFill } from "react-icons/bs";
 import { BiLogOutCircle } from "react-icons/bi";
-
 import { Menu, Transition } from "@headlessui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { useToast } from "../../hooks";
 import { logoutUser } from "../../features";
-import { useTheme } from "../../context";
 
 const NavLinkDropdown = () => {
   const { auth } = useSelector((state) => state);
-
-  const { theme, setTheme } = useTheme();
 
   const { showToast } = useToast();
 
@@ -40,7 +35,7 @@ const NavLinkDropdown = () => {
             <img
               src={auth.user.avatar}
               alt={auth.user.userName}
-              className="h-8 w-8 rounded-full"
+              className="h-9 w-9 rounded-full"
             />
             <HiChevronDown
               className="ml-2 -mr-1 h-6 w-6 text-cyan-100 hover:text-cyan-500"
@@ -62,7 +57,7 @@ const NavLinkDropdown = () => {
               <Menu.Item>
                 {({ active }) => (
                   <Link
-                    to={`/profile/${auth.user._id}`}
+                    to={`/user/${auth.user._id}`}
                     className={`${
                       active
                         ? "bg-cyan-500 text-white"
@@ -76,25 +71,6 @@ const NavLinkDropdown = () => {
                     />
                     Profile
                   </Link>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active
-                        ? "bg-cyan-500 text-white"
-                        : "text-gray-900 dark:text-gray-100"
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                    onClick={() => {
-                      setTheme((currentTheme) =>
-                        currentTheme === "light" ? "dark" : "light"
-                      );
-                    }}
-                  >
-                    <BsFillMoonStarsFill className="h-4 w-4 rounded-full mr-3" />
-                    {theme === "light" ? "Dark Mode" : "Light Mode"}
-                  </button>
                 )}
               </Menu.Item>
             </div>

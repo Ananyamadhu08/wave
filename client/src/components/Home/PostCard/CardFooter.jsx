@@ -82,17 +82,20 @@ const CardFooter = ({ post }) => {
         />
 
         {saved ? (
-          <div className="text-3xl text-cyan-500" onClick={handleUnSavePost}>
+          <div
+            className="text-3xl text-cyan-500 ml-1"
+            onClick={handleUnSavePost}
+          >
             <i className="fa-solid fa-bookmark"></i>
           </div>
         ) : (
-          <div className="text-3xl text-cyan-500" onClick={handleSavePost}>
-            <i className="fa-solid fa-bookmark"></i>
+          <div className="text-3xl text-cyan-500 ml-1" onClick={handleSavePost}>
+            <i className="fa-regular fa-bookmark"></i>
           </div>
         )}
       </div>
 
-      <div className="flex justify-between">
+      <div className="flex justify-end">
         <h6 className="p-2 cursor-pointer mx-4 font-medium hover:underline dark:text-white">
           {post.likes.length} likes
         </h6>

@@ -28,7 +28,7 @@ const CommentDisplay = ({ comment, post, replyComments }) => {
 
           {replyComments.length - next > 0 ? (
             <div
-              className="p-2 text-purple-500 cursor-pointer"
+              className="p-2 text-cyan-500 cursor-pointer"
               onClick={() => setNext(next + 10)}
             >
               See more comments...
@@ -36,7 +36,7 @@ const CommentDisplay = ({ comment, post, replyComments }) => {
           ) : (
             replyComments.length > 1 && (
               <div
-                className="p-2 text-purple-500 cursor-pointer"
+                className="p-2 text-cyan-500 cursor-pointer"
                 onClick={() => setNext(1)}
               >
                 Hide comments...

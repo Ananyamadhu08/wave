@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { CreatePostModal, Header } from "./components";
+import { CreatePostModal, Footer, Header } from "./components";
 import { PageRenderer } from "./customRouter";
 import { getPosts, refreshToken } from "./features";
 import { Home, Login, Register } from "./pages";
@@ -47,15 +47,19 @@ const App = () => {
 
       {postModal?.isModalOpen && <CreatePostModal />}
 
-      <Routes>
-        <Route path="/" element={auth.token ? <Home /> : <Login />} />
+      <div style={{ minHeight: "100vh" }}>
+        <Routes>
+          <Route path="/" element={auth.token ? <Home /> : <Login />} />
 
-        <Route path="/register" element={<Register />} />
+          <Route path="/register" element={<Register />} />
 
-        <Route path="/:page" element={<PageRenderer />} />
+          <Route path="/:page" element={<PageRenderer />} />
 
-        <Route path="/:page/:id" element={<PageRenderer />} />
-      </Routes>
+          <Route path="/:page/:id" element={<PageRenderer />} />
+        </Routes>
+      </div>
+
+      {auth.token && <Footer />}
     </div>
   );
 };

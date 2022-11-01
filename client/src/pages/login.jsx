@@ -38,6 +38,14 @@ const Login = () => {
     dispatch(loginUser({ ...userData, showToast, navigateTo }));
   };
 
+  const loginWithTestCredentials = () => {
+    const testCredentials = {
+      email: "jane@gmail.com",
+      password: "password",
+    };
+    dispatch(loginUser({ ...testCredentials, showToast, navigateTo }));
+  };
+
   return (
     <div className="w-full bg-slate-900 min-h-screen flex flex-col sm:justify-center justify-center items-center pt-6 sm:pt-0">
       <h2 className="text-cyan-500  text-center text-4xl font-extrabold">
@@ -83,12 +91,18 @@ const Login = () => {
               Login
             </button>
           </div>
-          <div className="mt-6 text-center">
-            <Link to="/register" className="underline">
-              Sign up for an account
-            </Link>
-          </div>
         </form>
+        <button
+          onClick={loginWithTestCredentials}
+          className="w-full inline-flex items-center justify-center  py-3 bg-cyan-500 border-transparent rounded-md font-semibold text-xl text-slate-900 hover:bg-cyan-700 mt-4"
+        >
+          Login with test credentials
+        </button>
+        <div className="mt-6 text-center">
+          <Link to="/register" className="underline">
+            Sign up for an account
+          </Link>
+        </div>
       </div>
     </div>
   );

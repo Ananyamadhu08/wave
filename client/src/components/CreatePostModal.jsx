@@ -162,14 +162,14 @@ const CreatePostModal = () => {
                   >
                     <div>
                       <textarea
-                        className="w-full max-h-[150px] border-none outline-none resize-none dark:bg-slate-800 p-1 rounded z-50"
+                        className="w-full max-h-[150px] border-none outline-none resize-none dark:bg-slate-700 p-1 rounded z-50"
                         name="content"
                         value={content}
                         placeholder={`${auth.user.userName}, what are you thinking?`}
                         onChange={(e) => setContent(e.target.value)}
                       />
 
-                      <div className="flex flex-wrap">
+                      <div className="flex flex-wrap cursor-pointer">
                         <div className="flex-auto"></div>
                         <Icons setContent={setContent} content={content} />
                       </div>

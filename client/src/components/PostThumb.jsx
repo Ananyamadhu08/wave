@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { AiOutlineHeart } from "react-icons/ai";
 import { FaRegComments } from "react-icons/fa";
 
 const PostThumb = ({ posts, result }) => {
   if (result === 0)
-    return <h2 className="text-center text-red-500">No Posts</h2>;
+    return <h2 className="text-center text-red-500 mt-5">No Posts</h2>;
 
   return (
     <div
@@ -13,8 +12,8 @@ const PostThumb = ({ posts, result }) => {
       className="w-full grid justify-center gap-3 overflow-hidden my-4 mx-0"
     >
       {posts.map((post) => (
-        <Link key={post._id} to={`/post/${post._id}`}>
-          <div className="min-w-[300px] h-[300px] w-full relative cursor-pointer overflow-hidden group rounded">
+        <div key={post._id}>
+          <div className="min-w-[300px] h-[300px] w-full relative overflow-hidden group rounded">
             {post?.images[0]?.url?.match(/video/i) ? (
               <video
                 className="w-full h-full block object-cover"
@@ -41,7 +40,7 @@ const PostThumb = ({ posts, result }) => {
               </div>
             </div>
           </div>
-        </Link>
+        </div>
       ))}
     </div>
   );
