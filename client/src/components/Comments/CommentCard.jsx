@@ -109,7 +109,7 @@ const CommentCard = ({ children, comment, post, commentId }) => {
               </span>
               {content.length > 100 && (
                 <span
-                  className="cursor-pointer text-purple-500"
+                  className="cursor-pointer text-cyan-500"
                   onClick={() => setReadMore(!readMore)}
                 >
                   {readMore ? "Hide content" : "Read more"}
