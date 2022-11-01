@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer
-      className="h-12 text-2xl flex gap-10 justify-center items-center shadow-inner  bg-slate-900 dark:bg-cyan-900 text-white fixed w-full z-20"
+      className="h-12 text-2xl flex gap-8 justify-center items-center shadow-inner  bg-slate-900 dark:bg-cyan-900 text-cyan-100 fixed w-full z-20"
       style={{ bottom: 0 }}
     >
       <a

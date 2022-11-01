@@ -10,11 +10,11 @@ const NavLinks = () => {
         {
           <NavLink to="/">
             {theme === "light" ? (
-              <div className="text-3xl text-cyan-50">
+              <div className="text-3xl text-cyan-100">
                 <i className="fa-solid fa-house"></i>
               </div>
             ) : (
-              <div className="text-3xl text-cyan-50">
+              <div className="text-3xl text-cyan-100">
                 <i className="fa-solid fa-house"></i>
               </div>
             )}
@@ -31,11 +31,11 @@ const NavLinks = () => {
             }}
           >
             {theme === "light" ? (
-              <div className="text-3xl text-cyan-50">
+              <div className="text-3xl text-cyan-100">
                 <i className="fa-solid fa-moon"></i>
               </div>
             ) : (
-              <div className="text-3xl text-cyan-50">
+              <div className="text-3xl text-cyan-100">
                 <i className="fa-solid fa-sun"></i>
               </div>
             )}
