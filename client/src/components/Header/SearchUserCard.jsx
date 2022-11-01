@@ -5,7 +5,7 @@ const SearchUserCard = ({ user }) => {
   return (
     <Link
       to={`/user/${user._id}`}
-      className="flex items-center text-gray-900 bg-white dark:bg-slate-700 dark:text-gray-100 p-2 mb-3 w-full rounded cursor-pointer hover:shadow-md"
+      className="flex items-center text-gray-900 bg-cyan-50 dark:bg-slate-800 shadow-md dark:text-gray-100 py-2 px-3 mb-3 w-full rounded cursor-pointer hover:bg-cyan-100"
     >
       <img
         src={user.avatar}
@@ -14,8 +14,8 @@ const SearchUserCard = ({ user }) => {
       />
 
       <div className="flex flex-col">
-        <h4 className="underline text-2xl">{user.userName}</h4>
-        <p className="text-xl text-gray-500 dark:text-gray-50">
+        <h4 className="text-2xl">{user.userName}</h4>
+        <p className="text-sm text-gray-500 dark:text-gray-50">
           {user.fullName}
         </p>
       </div>
