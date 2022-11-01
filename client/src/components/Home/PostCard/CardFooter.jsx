@@ -89,11 +89,8 @@ const CardFooter = ({ post }) => {
             <i className="fa-solid fa-bookmark"></i>
           </div>
         ) : (
-          <div
-            className="text-3xl text-slate-400 ml-1"
-            onClick={handleSavePost}
-          >
-            <i className="fa-solid fa-bookmark"></i>
+          <div className="text-3xl text-cyan-500 ml-1" onClick={handleSavePost}>
+            <i className="fa-regular fa-bookmark"></i>
           </div>
         )}
       </div>
