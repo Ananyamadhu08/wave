@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const SearchUserCard = ({ user }) => {
+  console.log(user, "SearchUserCard user prop");
   return (
     <Link
       to={`/user/${user._id}`}

@@ -51,16 +51,24 @@ const UserInfo = ({ id, auth, profile }) => {
               )}
             </div>
 
-            <div className="cursor-pointer text-cyan-500 mb-4">
+            <div className="text-cyan-500 mb-4">
               <span
-                className="mr-4 hover:underline"
-                onClick={() => setShowFollowers(true)}
+                className={`ml-4 ${
+                  auth.user?._id === id && "hover:underline cursor-pointer"
+                } `}
+                onClick={() => {
+                  auth.user?._id === id && setShowFollowers(true);
+                }}
               >
                 {user?.followers.length} Followers
               </span>
               <span
-                className="ml-4 hover:underline"
-                onClick={() => setShowFollowing(true)}
+                className={`ml-4 ${
+                  auth.user?._id === id && "hover:underline"
+                } `}
+                onClick={() => {
+                  auth.user?._id === id && setShowFollowing(true);
+                }}
               >
                 {user?.following.length} Following
               </span>
