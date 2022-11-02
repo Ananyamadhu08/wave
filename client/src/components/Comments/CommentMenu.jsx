@@ -27,7 +27,7 @@ const CommentMenu = ({ post, comment, setOnEdit }) => {
               onClick={() => setOnEdit(true)}
               className={`${
                 active
-                  ? "bg-violet-500 text-white"
+                  ? "bg-cyan-500 text-white"
                   : "text-gray-900 dark:text-white"
               } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
             >
@@ -41,7 +41,7 @@ const CommentMenu = ({ post, comment, setOnEdit }) => {
               onClick={handleRemove}
               className={`${
                 active
-                  ? "bg-violet-500 text-white"
+                  ? "bg-cyan-500 text-white"
                   : "text-gray-900 dark:text-white"
               } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
             >
@@ -56,7 +56,7 @@ const CommentMenu = ({ post, comment, setOnEdit }) => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center items-center rounded-md px-4 py-2  text-sm font-medium text-black dark:text-white focus:outline-cyan-400 focus:outline focus:outline-offset-2">
+        <Menu.Button className="inline-flex w-full justify-center items-center rounded-md px-4 py-2  text-sm font-medium text-black dark:text-white">
           <BiDotsVerticalRounded className="text-3xl" />
         </Menu.Button>
       </div>
@@ -82,7 +82,7 @@ const CommentMenu = ({ post, comment, setOnEdit }) => {
                       onClick={handleRemove}
                       className={`${
                         active
-                          ? "bg-violet-500 text-white"
+                          ? "bg-cyan-500 text-white"
                           : "text-gray-900 dark:text-white"
                       } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                     >
