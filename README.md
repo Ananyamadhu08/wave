@@ -17,7 +17,6 @@ A social media application.
 - load more posts for home page
 - dark mode
 - suggested users
-- suggested users
 - login with test credentials 
 
 ![Screen Shot 2022-11-02 at 5 41 35 PM](https://user-images.githubusercontent.com/78725970/199486640-6356da9d-4cd0-4b2c-8c0c-e43944609817.png)
